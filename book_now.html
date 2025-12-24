@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Book Now | Dragon 71 Taxi</title>
+<style>
+  :root{--bg:#0f0f0f;--gold:#f5b41b;--line:rgba(255,255,255,.12);--card:rgba(255,255,255,.05);--muted:rgba(255,255,255,.75);--max:920px}
+  *{box-sizing:border-box}
+  body{margin:0;font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#fff}
+  a{color:inherit;text-decoration:none}
+  header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.35);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{max-width:var(--max);margin:0 auto;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:950}
+  .brand img{width:44px;height:44px;border-radius:999px;border:1px solid rgba(245,180,27,.55);box-shadow:0 0 26px rgba(245,180,27,.18)}
+  main{max-width:var(--max);margin:0 auto;padding:32px 18px 46px}
+  h1{margin:0 0 6px;font-size:40px}
+  .sub{margin:0 0 14px;color:var(--gold);font-weight:950}
+  .banner{height:220px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.10);
+    background: radial-gradient(820px 520px at 18% 30%, rgba(245,180,27,.18), transparent 62%),
+                linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.12)),
+                url("assets/hero.jpg") center/cover no-repeat;
+    filter: brightness(1.08) contrast(1.02);
+  }
+  form{margin-top:16px;border:1px solid var(--line);background:var(--card);border-radius:18px;padding:18px;display:grid;gap:12px}
+  label{font-size:12px;color:var(--muted);font-weight:950;letter-spacing:.2px;text-transform:uppercase}
+  input,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.28);color:#fff;outline:none}
+  textarea{min-height:120px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:760px){.row{grid-template-columns:1fr}}
+  button{padding:12px 14px;border-radius:12px;border:1px solid rgba(245,180,27,.55);background:rgba(245,180,27,.26);color:#fff;font-weight:950;cursor:pointer}
+  button:hover{background:rgba(245,180,27,.34)}
+  .note{color:var(--muted);font-weight:750;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Dragon 71 logo">
+      <div>DRAGON 71 TAXI</div>
+    </div>
+    <a href="index.html" style="font-weight:900">Home</a>
+  </div>
+</header>
+
+<main>
+  <h1>Schedule in Advance</h1>
+  <div class="sub">Dragon 71 Taxi Service</div>
+  <div class="banner" aria-label="Taxi background"></div>
+
+  <form onsubmit="event.preventDefault(); alert('Success! Your request was received.');">
+    <div class="row">
+      <div><label>Name</label><input required placeholder="Your name"></div>
+      <div><label>Phone</label><input placeholder="+1 (671) ..."></div>
+    </div>
+    <div class="row">
+      <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      <div><label>Date / Time</label><input placeholder="e.g., Jan 4, 3:30 AM"></div>
+    </div>
+    <div class="row">
+      <div><label>Pickup location</label><input placeholder="Hotel / address"></div>
+      <div><label>Drop-off location</label><input placeholder="Destination"></div>
+    </div>
+    <div><label>Notes</label><textarea placeholder="Passengers, luggage, base access, flight #, etc."></textarea></div>
+    <button type="submit">Send</button>
+    <div class="note">Tip: You can also call +1-671-483-6456 for immediate booking.</div>
+  </form>
+</main>
+</body>
+</html>
