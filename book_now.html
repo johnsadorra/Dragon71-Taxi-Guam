@@ -49,23 +49,60 @@
   <div class="sub">Dragon 71 Taxi Service</div>
   <div class="banner" aria-label="Taxi background"></div>
 
-  <form onsubmit="event.preventDefault(); alert('Success! Your request was received.');">
-    <div class="row">
-      <div><label>Name</label><input required placeholder="Your name"></div>
-      <div><label>Phone</label><input placeholder="+1 (671) ..."></div>
+  <form action="https://formspree.io/f/xvzpeqgj" method="POST">
+
+  <div class="row">
+    <div>
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Your name" required>
     </div>
-    <div class="row">
-      <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
-      <div><label>Date / Time</label><input placeholder="e.g., Jan 4, 3:30 AM"></div>
+
+    <div>
+      <label>Phone</label>
+      <input type="tel" name="phone" placeholder="+1 (671) ..." required>
     </div>
-    <div class="row">
-      <div><label>Pickup location</label><input placeholder="Hotel / address"></div>
-      <div><label>Drop-off location</label><input placeholder="Destination"></div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label>Email</label>
+      <input type="email" name="email" placeholder="you@email.com" required>
     </div>
-    <div><label>Notes</label><textarea placeholder="Passengers, luggage, base access, flight #, etc."></textarea></div>
-    <button type="submit">Send</button>
-    <div class="note">Tip: You can also call +1-671-483-6456 for immediate booking.</div>
-  </form>
+
+    <div>
+      <label>Date / Time</label>
+      <input type="datetime-local" name="datetime" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label>Pickup location</label>
+      <input type="text" name="pickup" placeholder="Hotel / address" required>
+    </div>
+
+    <div>
+      <label>Drop-off location</label>
+      <input type="text" name="dropoff" placeholder="Destination" required>
+    </div>
+  </div>
+
+  <div>
+    <label>Notes</label>
+    <textarea name="notes" placeholder="Passengers, luggage, base access, flight #, etc."></textarea>
+  </div>
+
+  <!-- Email subject -->
+  <input type="hidden" name="_subject" value="New Taxi Booking - Dragon 71">
+
+  <button type="submit">Send</button>
+
+  <div class="note">
+    Tip: You can also call +1-671-483-6456 for immediate booking.
+  </div>
+
+</form>
+
 </main>
 </body>
 </html>
