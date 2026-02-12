@@ -173,7 +173,38 @@
   }
   .wa:hover{ background: rgba(245,180,27,.34); }
   footer{padding:24px 18px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,.10)}
-</style>
+/* --- Dragon 71 CTA Buttons --- */
+.cta-buttons {
+display: flex;
+flex-direction: column;
+gap: 15px;
+max-width: 320px;
+margin: 30px auto;
+}
+
+.btn {
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+padding: 16px;
+border-radius: 10px;
+text-align: center;
+}
+
+.whatsapp-btn {
+background-color: #25D366;
+color: #fff;
+}
+
+.call-btn {
+background-color: #f1c40f;
+color: #000;
+}
+
+.email-btn {
+background-color: #333;
+color: #fff;
+}</style>
 </head>
 <body>
 <header>
@@ -189,8 +220,18 @@
     </div>
   </div>
 </header>
+<!-- Call to Action Buttons -->
+<div class="cta-buttons">
 
-<main>
+  <a href="tel:+16714836456" class="btn call">
+    📞 Call Now
+  </a>
+
+  <a href="https://wa.me/+16714836456" target="_blank" class="btn wa">
+    💬 WhatsApp
+  </a>
+
+</div><main>
   <section class="hero" id="home">
     <div class="hero-inner">
       <div class="left">
